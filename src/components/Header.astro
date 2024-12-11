@@ -1,0 +1,20 @@
+---
+import ThemeIcon from "./ThemeIcon.astro";
+---
+
+<header
+  class="m-1 rounded-md border-2 border-b-4 border-gray-900 bg-gradient-to-r
+  from-indigo-600 to-pink-500 p-2 text-white dark:from-indigo-800
+  dark:to-pink-700"
+>
+  <nav class="relative flex align-middle text-3xl font-bold">
+    <div class="grow text-center">
+      <a href="/">POSTS</a>
+      //
+      <a href="/about/">ABOUT</a>
+    </div>
+    <div class="absolute right-2">
+      <ThemeIcon />
+    </div>
+  </nav>
+</header>
