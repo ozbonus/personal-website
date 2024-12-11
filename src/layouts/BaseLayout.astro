@@ -1,0 +1,19 @@
+---
+import Header from "../components/Header.astro";
+const { pageTitle } = Astro.props;
+---
+
+<html class="list-inside list-disc bg-yellow-50 tabular-nums dark:bg-slate-700">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Chris Perry" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="my-0 mx-auto w-full max-w-2xl p-2">
+    <Header />
+    <slot />
+  </body>
+</html>
