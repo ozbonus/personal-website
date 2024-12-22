@@ -32,7 +32,7 @@
 			"cover: \"/src/images/${4:placeholder.webp}\"",
 			"alt: \"${5:alt text}\"",
 			"tags: [",
-			"\t\"esl\",",
+			"\t\"ESL\",",
 			"]",
 			"---",
 			"",
