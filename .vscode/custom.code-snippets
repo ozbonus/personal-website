@@ -37,5 +37,12 @@
 			"---",
 			"",
 		]
+	},
+	"Blog post image": {
+		"isFileTemplate": false,
+		"scope": "mdx,markdown",
+		"prefix": "blog image",
+		"description": "Include an image in a blog post",
+		"body": "![${1:alt text}](/src/images/${2:placeholder.webp})"
 	}
 }
