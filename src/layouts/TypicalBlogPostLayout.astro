@@ -8,5 +8,5 @@ const { frontmatter } = Astro.props;
   <Image src={frontmatter.cover} alt={frontmatter.alt} />
   <p>Written by {frontmatter.author}</p>
   <p>Published on {frontmatter.pubDate.toString()}</p>
-  <slot />
+    <slot />
 </BaseLayout>

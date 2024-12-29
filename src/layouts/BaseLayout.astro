@@ -1,4 +1,8 @@
 ---
+interface Props {
+  pageTitle: string;
+}
+
 import Header from "../components/Header.astro";
 const { pageTitle } = Astro.props;
 ---
@@ -11,6 +15,7 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{pageTitle}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.15/dist/katex.css" integrity="sha384-zLeDfjAc8DwENEGNNTkTTnfsm/SivaEXAA2fE7fRzBTXD0tVOIzGYvE5XYRds2T3" crossorigin="anonymous">
   </head>
   <body class="my-0 mx-auto w-full max-w-2xl p-2">
     <Header />

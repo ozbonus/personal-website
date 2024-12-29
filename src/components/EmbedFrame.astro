@@ -1,0 +1,13 @@
+---
+interface Props {
+  src: string;
+  width: string;
+  height: string;
+}
+
+const { src, width = "500", height = "500" } = Astro.props;
+---
+
+<div class="flex items-center justify-center">
+  <iframe src={src} width={width} height={height}></iframe>
+</div>
