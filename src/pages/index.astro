@@ -4,7 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import { Image } from "astro:assets";
 const pageTitle = "Chris 之 Blog";
-const allPosts = await getCollection("blog");
+const allPosts = await getCollection("posts");
 allPosts.sort((a: any, b: any) => b.data.pubDate - a.data.pubDate);
 ---
 
