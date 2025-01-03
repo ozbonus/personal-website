@@ -11,6 +11,7 @@ const posts = defineCollection({
       message: "Title must be 128 characters or fewer."
     }),
     pubDate: z.date(),
+    editDate: z.date().optional(),
     author: z.string(),
     cover: image(),
     alt: z.string(),
@@ -18,4 +19,4 @@ const posts = defineCollection({
   })
 });
 
-export const collections = {posts };
+export const collections = { posts };
