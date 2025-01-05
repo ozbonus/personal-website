@@ -1,7 +1,7 @@
 import { glob } from "astro/loaders";
 import { z, defineCollection } from "astro:content";
 
-const blog = defineCollection({
+const posts = defineCollection({
   loader: glob({ pattern: '**/[^_]*.md*', base: "./src/blog" }),
   schema: ({ image }) => z.object({
     title: z.string().max(60, {
@@ -11,6 +11,7 @@ const blog = defineCollection({
       message: "Title must be 128 characters or fewer."
     }),
     pubDate: z.date(),
+    editDate: z.date().optional(),
     author: z.string(),
     cover: image(),
     alt: z.string(),
@@ -18,4 +19,4 @@ const blog = defineCollection({
   })
 });
 
-export const collections = { blog };
+export const collections = { posts };

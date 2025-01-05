@@ -7,7 +7,10 @@ import Header from "../components/Header.astro";
 const { pageTitle } = Astro.props;
 ---
 
-<html class="list-inside list-disc bg-yellow-50 tabular-nums dark:bg-slate-700">
+<html
+  class="list-inside list-disc bg-yellow-50 tabular-nums transition-all
+  dark:bg-slate-900"
+>
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="Chris Perry" />
@@ -15,9 +18,14 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{pageTitle}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.15/dist/katex.css" integrity="sha384-zLeDfjAc8DwENEGNNTkTTnfsm/SivaEXAA2fE7fRzBTXD0tVOIzGYvE5XYRds2T3" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.15/dist/katex.css"
+      integrity="sha384-zLeDfjAc8DwENEGNNTkTTnfsm/SivaEXAA2fE7fRzBTXD0tVOIzGYvE5XYRds2T3"
+      crossorigin="anonymous"
+    />
   </head>
-  <body class="my-0 mx-auto w-full max-w-2xl p-2">
+  <body class="mx-auto my-0 max-w-6xl p-2">
     <Header />
     <slot />
   </body>
