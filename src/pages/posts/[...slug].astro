@@ -4,7 +4,7 @@ import TypicalBlogPostLayout from "../../layouts/TypicalBlogPostLayout.astro";
 import Prose from "../../components/Prose.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("posts");
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },
