@@ -10,6 +10,15 @@ import rehypeKatex from 'rehype-katex';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), mdx(), sitemap(), tailwind()],
+  vite: {
+    server: {
+      watch: {
+        ignored: [
+          "**/readme_images/",
+        ],
+      },
+    },
+  },
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
