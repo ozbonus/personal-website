@@ -10,7 +10,7 @@ allPosts.sort((a: any, b: any) => b.data.pubDate - a.data.pubDate);
 
 <BaseLayout pageTitle={pageTitle}>
   <div
-    class="mx-8 grid grid-cols-1 items-start gap-8 md:mx-auto md:grid-cols-2 md:justify-items-stretch md:gap-4 lg:grid-cols-3">
+    class="mx-8 grid grid-cols-1 items-start gap-8 md:mx-8 md:grid-cols-2 md:justify-items-stretch md:gap-8 lg:grid-cols-3">
     {allPosts.map((post) => <BlogPost post={post} />)}
   </div>
 </BaseLayout>
