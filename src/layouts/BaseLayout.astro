@@ -3,6 +3,7 @@ interface Props {
   pageTitle: string;
 }
 
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 const { pageTitle } = Astro.props;
 ---
@@ -22,8 +23,9 @@ const { pageTitle } = Astro.props;
       crossorigin="anonymous"
     />
   </head>
-  <body class="mx-auto my-0 max-w-6xl p-2">
+  <body class="">
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
