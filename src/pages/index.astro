@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import BlogPost from "../components/BlogPost.astro";
+import PostCard from "../components/PostCard.astro";
 import { Image } from "astro:assets";
 const pageTitle = "Chris 之 Blog";
 const allPosts = await getCollection("posts");
@@ -11,6 +11,6 @@ allPosts.sort((a: any, b: any) => b.data.pubDate - a.data.pubDate);
 <BaseLayout pageTitle={pageTitle}>
   <div
     class="mx-8 my-8 grid grid-cols-1 items-start gap-8 md:mx-8 md:grid-cols-2 md:justify-items-stretch md:gap-8 lg:grid-cols-3">
-    {allPosts.map((post) => <BlogPost post={post} />)}
+    {allPosts.map((post) => <PostCard post={post} />)}
   </div>
 </BaseLayout>
