@@ -11,6 +11,9 @@ export default {
     },
     extend: {
       boxShadow: {
+        "brutal-2": "2px 2px 0px 0px",
+        "brutal-3": "3px 3px 0px 0px",
+        "brutal-4": "4px 4px 0px 0px",
         "brutal-5": "5px 5px 0px 0px",
         "brutal-8": "8px 8px 0px 0px",
         "brutal-12": "12px 12px 0px 0px",
