@@ -10,6 +10,7 @@ import rehypeKatex from 'rehype-katex';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), mdx(), sitemap(), tailwind()],
+  site: "https://hellochris.netlify.app",
   vite: {
     server: {
       watch: {
