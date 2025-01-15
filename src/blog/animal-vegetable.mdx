@@ -3,7 +3,7 @@ title: "Animal or Vegetable"
 description: "A fast-paced video game for school events."
 pubDate: 2024-05-14
 author: "Chris Perry"
-cover: "/src/images/animal-vegetable-title.webp"
+cover: "../images/animal-vegetable-title.webp"
 alt: "An image of the Animal or Vegetable title screen with icons showing four players are ready to participate."
 tags: [
   "ESL",
@@ -11,7 +11,7 @@ tags: [
   "Godot",
 ]
 ---
-import Vimeo from "/src/components/Vimeo.astro";
+import Vimeo from "../components/Vimeo.astro";
 
 Teaching at an ESL cram school means that you'll occasionally get roped into efforts to recruit new students. School festivals in particular are a big deal because they offer an opportunity to engage with possibly hundreds of students and their families, but getting their attention is a challenge among the numerous other attractions. That's why I made Animal or Vegetable, a simple arcade style video game with flashy visuals, music, and gameplay that was so successful the first time I used it, my school ran out of promotional handouts two hours before the event was over.
 
@@ -37,23 +37,23 @@ Here is a brief demonstration of how the game is played. Overlays show what keyb
 
 ## How to play (player's POV)
 
-![A Closeup image of the player controls.](/src/images/animal-vegetable-controller-closeup.webp)
+![A Closeup image of the player controls.](../images/animal-vegetable-controller-closeup.webp)
 
 These two buttons are all you need to play.
 
-![An animated image of the player entering their age.](/src/images/animal-vegetable-age.gif)
+![An animated image of the player entering their age.](../images/animal-vegetable-age.gif)
 
 Use the buttons to enter your age. The numbers only range from 5 to 14+, but anyone can play. Older players get a more challenging game. Younger players get a simpler game and extra points.
 
-![An animated image of the tutorial portion of the game.](/src/images/animal-vegetable-push-both.gif)
+![An animated image of the tutorial portion of the game.](../images/animal-vegetable-push-both.gif)
 
 If the little arrow is pointing at an animal, push the left button. If the little arrow is pointing at a plant, push the right button.
 
-![An animated image of the player being warned to stop flailing at the buttons and slow down.](/src/images/animal-vegetable-slow.gif)
+![An animated image of the player being warned to stop flailing at the buttons and slow down.](../images/animal-vegetable-slow.gif)
 
 Play quickly, but carefully. If you just hit the buttons crazily, the game will stop until you slow down.
 
-![An animated image of the button-mashing bonus game.](/src/images/animal-vegetable-mash.gif)
+![An animated image of the button-mashing bonus game.](../images/animal-vegetable-mash.gif)
 
 If you're doing a good job, sometimes you can play a quick bonus game. Push the two buttons as fast as you can!
 
@@ -61,7 +61,7 @@ If you're doing a good job, sometimes you can play a quick bonus game. Push the 
 
 Think of the game as having five modes that you cycle through: attract, age, tutorial, game, and score. You can move to the next mode in the sequence by pressing the `Enter` key on your keyboard. To move back to the previous mode press the `Backspace` key.
 
-![An image of the five modes that the game cycles through: attract, age, tutorial, game, and score.](/src/images/animal-vegetable-mode-flow.webp)
+![An image of the five modes that the game cycles through: attract, age, tutorial, game, and score.](../images/animal-vegetable-mode-flow.webp)
 
 ### Attract mode
 
@@ -102,7 +102,7 @@ Each difficulty level has five sub-levels which corresponds to the number of car
 
 Here are cards from the three difficulty levels:
 
-![An image of a card from each of the three difficulty levels. The easy mode card is a picture of a cat. The medium mode card is a small picture of a banana next to the word "banana". The hard mode card is the word "rice" without a picture.](/src/images/animal-vegetable-card-difficulty.webp)
+![An image of a card from each of the three difficulty levels. The easy mode card is a picture of a cat. The medium mode card is a small picture of a banana next to the word "banana". The hard mode card is the word "rice" without a picture.](../images/animal-vegetable-card-difficulty.webp)
 
 If a player is just pressing buttons wildly, cards will stop appearing and a warning will appear, telling the player to slow down. After not pushing any buttons for a short amount of time the game resumes as normal.
 
@@ -235,7 +235,7 @@ Inside of each box is an Arduino Leonardo, which is far more power than what thi
 
 The wires have crimp connecters for the switches and Dupont connectors for the Arduinos, so no soldering is required.
 
-![A composite image of the controller wiring. Top: An overview of the wiring from an Arduino to four switches. Left: A closeup of a switch with spade connectors on C and NC. Right: A closeup of the wires connected to an Arduino's GND, \~13, 12, \~11, and \~10 IO headers](/src/images/animal-vegetable-hardware.webp)
+![A composite image of the controller wiring. Top: An overview of the wiring from an Arduino to four switches. Left: A closeup of a switch with spade connectors on C and NC. Right: A closeup of the wires connected to an Arduino's GND, \~13, 12, \~11, and \~10 IO headers](../images/animal-vegetable-hardware.webp)
 
 ### Software
 

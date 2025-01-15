@@ -3,7 +3,7 @@ title: "Flutter tap target size"
 pubDate: 2024-07-24
 description: "How does Flutter decide which buttons get extra padding?"
 author: "Chris Perry"
-cover: "/src/images/tap-target-title.webp"
+cover: "../images/tap-target-title.webp"
 alt: "Three circles in a row. The center circle is surrounded by measurement lines and a label that reads 48."
 tags: [
   "Accessibility",
@@ -15,7 +15,7 @@ tags: [
 
 On mobile platforms you may have noticed that certain kinds of buttons always have some small amount of implicit padding, while on desktop they do not. You can see this in the screenshots below. This is the same code running on an iOS simulator and macOS.
 
-![An iOS app with padded buttons and a macOS app with un-padded buttons.](/src/images/tap-target-spacing.webp)
+![An iOS app with padded buttons and a macOS app with un-padded buttons.](../images/tap-target-spacing.webp)
 
 ## Why flutter does this
 
@@ -38,7 +38,7 @@ https://api.flutter.dev/flutter/material/MaterialTapTargetSize.html
 
 ## A look into the source code
 
-Whether to carry out this behavior is decided by this piece of code in `flutter/lib/src/material/theme_data.dart`:
+Whether to carry out this behavior is decided by this piece of code in `flutter/lib../material/theme_data.dart`:
 
 ```dart
 switch (platform) {
@@ -67,7 +67,7 @@ MaterialApp(
 )
 ```
 
-![An app on both iOS and macOS with un-padded buttons.](/src/images/tap-target-spacing-shrinkwrap.webp)
+![An app on both iOS and macOS with un-padded buttons.](../images/tap-target-spacing-shrinkwrap.webp)
 
 And this will enable it for all platforms.
 
@@ -80,7 +80,7 @@ MaterialApp(
 )
 ```
 
-![An app on both iOS and macOS with padded buttons.](/src/images/tap-target-spacing-padded.webp)
+![An app on both iOS and macOS with padded buttons.](../images/tap-target-spacing-padded.webp)
 
 ## Wrap-up
 
