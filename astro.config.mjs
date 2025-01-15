@@ -11,6 +11,9 @@ import rehypeKatex from 'rehype-katex';
 export default defineConfig({
   integrations: [react(), mdx(), sitemap(), tailwind()],
   site: "https://hellochris.netlify.app",
+  build: {
+    assets: "assets",
+  },
   vite: {
     server: {
       watch: {
