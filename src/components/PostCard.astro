@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { formatDate } from "../scripts/format_date.js";
 import PostCardTag from "./PostCardTag.astro";
@@ -20,7 +20,7 @@ const formattedDate = formatDate(pubDate);
 <div
   class="shadow-brutal-8 shadow-stone-950w border-4 border-stone-950 bg-white transition-transform ease-out motion-safe:hover:scale-y-105 hover:shadow-cyan-600">
   <a href={url}>
-    <Image class="" src={coverSrc} alt={coverAlt} />
+    <Picture class="" src={coverSrc} alt={coverAlt}  />
   </a>
   <div class="p-5">
     <a href={url}>

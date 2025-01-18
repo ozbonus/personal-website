@@ -12,6 +12,18 @@ tags: [
 ]
 ---
 import EmbedFrame from "../components/EmbedFrame.astro";
+import { Picture } from "astro:assets";
+import personal1 from "../images/mathy-card-game-personal-1.webp";
+import personal2 from "../images/mathy-card-game-personal-2.webp";
+import rules1 from "../images/mathy-card-game-rules-01.webp";
+import rules2 from "../images/mathy-card-game-rules-02.webp";
+import rules4 from "../images/mathy-card-game-rules-04.webp";
+import rules5 from "../images/mathy-card-game-rules-05.webp";
+import rules6 from "../images/mathy-card-game-rules-06.webp";
+import rules7 from "../images/mathy-card-game-rules-07.webp";
+import rules8 from "../images/mathy-card-game-rules-08.webp";
+import rules9 from "../images/mathy-card-game-rules-09.webp";
+import distribution from "../images/mathy-card-game-target-distribution.png";
 
 Oral arithmetic is an important skill for learning more advanced mathematical topics and communicating factual information to others. However, for years I had difficulty finding good ways to practice it in my ESL classes that wasn't boring or slow. That's why I developed Mathy Card Game. It's fun, easy to learn, and takes no time to set up. Players compete to quickly think of a way to calculate a target number using a set of other numbers and common mathematical operations. It's free for personal use by individual teachers.
 
@@ -21,35 +33,35 @@ Mathy Card Game can be played by one or many players. In my classes I am the dea
 
 Mathy Card Game uses three kinds of cards: operator cards, target cards, and play cards. Operator cards contain common mathematical operators (+ - × ÷ $a^b$ =). Target cards contain one of the digits 0 to 9 on each side. Play cards contain one of the digits 1 to 9 on one side. The target cards and play cards are separate decks and should be shuffled before each game.
 
-![](../images/mathy-card-game-rules-01.webp)
+<Picture src={rules1} alt="Plus, minus, times, and equals cards are laid out on the table." />
 
 ⤷ The dealer lays out all of the operator cards than can be used during the current game. In this picture not all of the operator cards are present, which is better for younger players.
 
-![](../images/mathy-card-game-rules-02.webp)
+<Picture src={rules2} alt="A 4 tens card and a 2 ones card are concatenated to make 42." />
 
 ⤷ The dealer lays down two target cards, one with the tens side face up and the other with the ones side face up, and makes a two digit number. This is the target number that the players must calculate.
 
-![](../images/mathy-card-game-rules-04.webp)
+<Picture src={rules4} alt="Three plays cards, 5, 8, and 9 are on the table. The players are thinking." />
 
 ⤷ The dealer lays down a few play cards and the players begin trying to think of way to calculate the target number using the play cards and the operators.
 
-![](../images/mathy-card-game-rules-05.webp)
+<Picture src={rules5} alt="The dealer asks, 'Would you like another card?'.  One player says, 'Yes' and another says, 'OK'." />
 
 ⤷ After letting the players think for a moment, the dealer asks the players if they would like another card. Players can insist on more time to think. In this image the players agree that they want another card.
 
-![](../images/mathy-card-game-rules-06.webp)
+<Picture src={rules6} alt="The play cards 5, 8, 9, and now 3 are on the table." />
 
 ⤷ The dealer, with some dramatic flare, places another play card on the table.
 
-![](../images/mathy-card-game-rules-07.webp)
+<Picture src={rules7} alt="A player raises their hand and shouts, 'I know!'" />
 
 ⤷ One player thinks that they have a solution and signals to the dealer.
 
-![](../images/mathy-card-game-rules-08.webp)
+<Picture src={rules8} alt="The player says, 'Nine times five is forty-five. Forty-five minus three is forty-two.'" />
 
 ⤷ In very simple terms the player explains how to calculate the target number using any of the play cards and operators. Not all of the play cards need to be used. There are no restrictions on how often a player may use operators or use figurative parentheses. A number card, however, can only be used once in a calculation. For example, if a player wanted to use $$2 + 2$$ there must be two 2s on the table.
 
-![](../images/mathy-card-game-rules-09.webp)
+<Picture src={rules9} alt="The play cards 5, 9, and 3 have been removed from the table. The play card 8 remains." />
 
 ⤷ The player gets to keep the cards they used in their calculation. Every card is worth one point. The dealer returns the target cards and unused play cards to the bottoms of their respective decks. The dealer then starts another round. The game continues until it's impossible to calculate the target number with all of the remaining play cards. The player with the most points is the winner.
 
@@ -108,11 +120,11 @@ The tens and ones distributions are independent, so whatever digit is on the ten
 
 The set that I use to play with my students is made from a simple pack of blank cards that cost less the $1 USD. Here are what the various cards look like:
 
-![](../images/mathy-card-game-personal-1.webp)
+<Picture src={personal1} alt="The five types of cards. Top-left: An optional title card with 'Mathy Card Game' written on it. Top-middle: The plus operator card with the words 'plus' and 'and' written on it. Top-right: A number 7 play card. Bottom-left: A tens place card with 2 on it. Bottom-right: A ones place card with 3 on it." />
 
 I found that cutting the corners differently for each type of card helps tremendously for keeping them organized and separating the different sub-decks when it's time to play. The target cards are cut such that they form a nice rounded rectangle when placed next to each other. The play cards are cut such that the shape enforces only one obvious way to stack them, so I can trust my students to keep them orderly as they collect them during the game. The operator and title cards are cut differently just to differentiate them when all of the cards are together.
 
-![](../images/mathy-card-game-personal-2.webp)
+<Picture src={personal2} alt="Left: My personal deck of cards. The differently-cut corners make the different groups of cards easy to distinguish. Right: A 10 millimeter corner cutter." />
 
 ## Variations
 
@@ -264,6 +276,6 @@ for i, label in enumerate(ax.get_xticklabels()):
 plt.show()
 ```
 
-![](../images/mathy-card-game-target-distribution.png)
+<Picture src={distribution} alt="A roughly normal distribution, truncated at 0 and 99. It's stepwise, with each step comprising 10 numbers. The highest step is the one that covers 20 to 29." />
 
 Looks good to me 🥳
