@@ -11,11 +11,17 @@ tags: [
 ]
 ---
 
+import { Picture } from "astro:assets";
+import padded from "../images/tap-target-spacing-padded.webp";
+import shrinkwrap from "../images/tap-target-spacing-shrinkwrap.webp";
+import spacing from "../images/tap-target-spacing.webp";
+import title from "../images/tap-target-title.webp";
+
 # Flutter tap target size
 
 On mobile platforms you may have noticed that certain kinds of buttons always have some small amount of implicit padding, while on desktop they do not. You can see this in the screenshots below. This is the same code running on an iOS simulator and macOS.
 
-![An iOS app with padded buttons and a macOS app with un-padded buttons.](../images/tap-target-spacing.webp)
+<Picture src={spacing} alt="An iOS app with padded buttons and a macOS app with un-padded buttons." />
 
 ## Why flutter does this
 
@@ -67,7 +73,7 @@ MaterialApp(
 )
 ```
 
-![An app on both iOS and macOS with un-padded buttons.](../images/tap-target-spacing-shrinkwrap.webp)
+<Picture src={shrinkwrap} alt="An app on both iOS and macOS with un-padded buttons." />
 
 And this will enable it for all platforms.
 
@@ -80,7 +86,7 @@ MaterialApp(
 )
 ```
 
-![An app on both iOS and macOS with padded buttons.](../images/tap-target-spacing-padded.webp)
+<Picture src={padded} alt="An app on both iOS and macOS with padded buttons." />
 
 ## Wrap-up
 
