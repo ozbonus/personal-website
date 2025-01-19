@@ -6,7 +6,6 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-
 import expressiveCode from 'astro-expressive-code';
 
 // https://astro.build/config
