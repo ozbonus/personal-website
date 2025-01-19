@@ -7,7 +7,7 @@ export default {
   },
   theme: {
     fontFamily: {
-      sans: ['"Atkinson Hyperlegible", sans-serif'],
+      sans: ['"Atkinson Hyperlegible"', 'sans-serif'],
     },
     extend: {
       boxShadow: {
