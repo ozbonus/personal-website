@@ -7,9 +7,18 @@ import tailwind from '@astrojs/tailwind';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
+import expressiveCode from 'astro-expressive-code';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), mdx(), sitemap(), tailwind()],
+  integrations: [
+    react(), expressiveCode({
+      themes: ["material-theme-palenight"],
+    }),
+    mdx(),
+    sitemap(),
+    tailwind(),
+  ],
   site: "https://hellochris.netlify.app",
   build: {
     assets: "assets",
@@ -24,9 +33,6 @@ export default defineConfig({
     },
   },
   markdown: {
-    shikiConfig: {
-      theme: "material-theme-palenight",
-    },
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },
