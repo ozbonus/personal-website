@@ -1,12 +1,41 @@
 ---
-import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import { Picture } from "astro:assets";
 import BaseLayout from "./BaseLayout.astro";
-const { frontmatter } = Astro.props;
+import Prose from "../components/Prose.astro";
+import { formatDate } from "../scripts/format_date.js";
+
+interface Props {
+  post: CollectionEntry<"posts">;
+}
+
+const { post } = Astro.props;
+const { title, description, pubDate, editDate, author, cover, alt, tags } =
+  post.data;
+
+const formattedPubDate = formatDate(pubDate);
+let formattedEditDate: string | null = null;
+
+if (editDate) {
+  formattedEditDate = formatDate(editDate);
+}
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
-  <Image src={frontmatter.cover} alt={frontmatter.alt} />
-  <p>Written by {frontmatter.author}</p>
-  <p>Published on {frontmatter.pubDate.toString()}</p>
+<BaseLayout pageTitle={title}>
+  <Prose>
+    <h1 class="text-balance underline decoration-sky-600 decoration-8">
+      {title}
+    </h1>
+    <div class="text-center">
+      <Picture src={cover} alt={alt} />
+    </div>
+    <div class="italic text-stone-500">
+      <p>
+        Published {formattedPubDate}
+        {formattedEditDate && <br />}
+        {formattedEditDate && `Edited ${formattedEditDate}`}
+      </p>
+    </div>
     <slot />
+  </Prose>
 </BaseLayout>
