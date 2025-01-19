@@ -1,20 +1,25 @@
 ---
 interface Props {
   pageTitle: string;
+  description?: string;
+  keywords?: string[];
 }
 
 import "/src/styles/global.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-const { pageTitle } = Astro.props;
+const { pageTitle, description = "Hello Chris Blog", keywords = [""] } = Astro.props;
 ---
 
 <html class="bg-yellow-50 tabular-nums transition-colors">
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content={description} />
     <meta name="author" content="Chris Perry" />
+    <meta name="keywords" content={keywords.join(", ")} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="author" href="https://github.com/ozbonus" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{pageTitle}</title>
     <link
