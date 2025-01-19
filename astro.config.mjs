@@ -24,6 +24,9 @@ export default defineConfig({
     },
   },
   markdown: {
+    shikiConfig: {
+      theme: "material-theme-palenight",
+    },
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },
