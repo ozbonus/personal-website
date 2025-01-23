@@ -1,13 +1,34 @@
 ---
+interface Props {
+  activePage?: string;
+}
+
+const { activePage } = Astro.props;
+const indexActive = activePage === "index";
+const aboutActive = activePage === "about";
 ---
 
+<script>
+  import { randomEmoji } from "../scripts/random_emoji.ts";
+  const emojiContainer = document.getElementById("emoji-container");
+  emojiContainer!.textContent = randomEmoji();
+</script>
+
 <header
-  class="m-1 rounded-md border-2 border-b-4 border-gray-900 bg-gradient-to-r from-indigo-600 to-pink-500 p-2 text-white">
-  <nav class="relative flex align-middle text-3xl font-bold">
-    <div class="grow text-center">
-      <a href="/">POSTS</a>
-      //
-      <a href="/about/">ABOUT</a>
+  class="border-b-4 border-black bg-amber-400 pb-2 pt-3 text-3xl font-bold text-black">
+  <nav>
+    <div class="flex flex-wrap justify-center">
+      <a
+        href="/"
+        class={indexActive ? "underline decoration-4 underline-offset-4" : ""}
+        >POSTS</a
+      >
+      <div id="emoji-container" class="min-w-16 text-center"></div>
+      <a
+        href="/about/"
+        class={aboutActive ? "underline decoration-4 underline-offset-4" : ""}
+        >ABOUT</a
+      >
     </div>
   </nav>
 </header>
