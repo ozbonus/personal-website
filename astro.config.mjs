@@ -15,7 +15,9 @@ export default defineConfig({
       themes: ["material-theme-palenight"],
     }),
     mdx(),
-    sitemap(),
+    sitemap({
+      filter: (page) => page !== "https://hellochris.dev/debug/",
+    }),
     tailwind(),
   ],
   site: "https://hellochris.dev",
