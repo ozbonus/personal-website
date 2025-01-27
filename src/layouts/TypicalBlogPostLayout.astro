@@ -4,6 +4,7 @@ import { Picture } from "astro:assets";
 import BaseLayout from "./BaseLayout.astro";
 import Prose from "../components/Prose.astro";
 import { formatDate } from "../scripts/format_date.js";
+import PostCardTag from "../components/PostCardTag.astro";
 
 interface Props {
   post: CollectionEntry<"posts">;
@@ -36,6 +37,9 @@ if (editDate) {
         {formattedEditDate && <br />}
         {formattedEditDate && `Edited ${formattedEditDate}`}
       </p>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      {tags.map((tag: string) => <PostCardTag tag={tag} />)}
     </div>
     <slot />
   </Prose>
