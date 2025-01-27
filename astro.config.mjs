@@ -18,7 +18,7 @@ export default defineConfig({
     sitemap(),
     tailwind(),
   ],
-  site: "https://hellochris.netlify.app",
+  site: "https://hellochris.dev",
   build: {
     assets: "assets",
   },
