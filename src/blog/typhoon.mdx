@@ -11,7 +11,7 @@ tags: [
 ]
 ---
 
-import { Picture } from "astro:assets";
+import PostPicture from "../components/PostPicture.astro"
 import typhoon0 from "../images/typhoon-0.gif";
 import typhoon1 from "../images/typhoon-1.gif";
 import typhoon2 from "../images/typhoon-2.gif";
@@ -35,19 +35,19 @@ A typhoon is blustering its way around the whiteboard and your class is caught i
 
 ## How to play (visual guide)
 
-<Picture src={typhoon1} alt="The faces of six students are drawn on the whiteboard along with a red X a little left of center." />
+<PostPicture src={typhoon1} alt="The faces of six students are drawn on the whiteboard along with a red X a little left of center." />
 
 Draw a variety of students around the board and pick a place for the titular typhoon to start.
 
-<Picture src={typhoon2} alt="A sticky ball has hit the upper right area." />
+<PostPicture src={typhoon2} alt="A sticky ball has hit the upper right area." />
 
 A student throws a sticky ball to where they want to typhoon to travel.
 
-<Picture src={typhoon3} alt="A line is drawn from the starting point chose at the beginning of the game to the point where the ball landed, crossing one student's face. The sticky ball has now landed on the lower right." />
+<PostPicture src={typhoon3} alt="A line is drawn from the starting point chose at the beginning of the game to the point where the ball landed, crossing one student's face. The sticky ball has now landed on the lower right." />
 
 Draw a line from one typhoon position to the next. Every student that is crossed by the line has been blown away by the typhoon. Another student throws.
 
-<Picture src={typhoon4} alt="The line from before is extended to the point where the sticky ball landed, crossing over two more faces." />
+<PostPicture src={typhoon4} alt="The line from before is extended to the point where the sticky ball landed, crossing over two more faces." />
 
 Yet more students are cast away to the Land of Oz!
 
