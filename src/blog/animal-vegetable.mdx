@@ -12,7 +12,7 @@ tags: [
 ]
 ---
 import Vimeo from "../components/Vimeo.astro";
-import { Picture } from "astro:assets";
+import PostPicture from "../components/PostPicture.astro"
 import difficulty from "../images/animal-vegetable-card-difficulty.webp";
 import closeup from "../images/animal-vegetable-controller-closeup.webp";
 import hardware from "../images/animal-vegetable-hardware.webp";
@@ -47,23 +47,23 @@ Here is a brief demonstration of how the game is played. Overlays show what keyb
 
 ## How to play (player's POV)
 
-<Picture src={closeup} alt={"A closeup of the player controls."} />
+<PostPicture src={closeup} alt={"A closeup of the player controls."} title="Controls"/>
 
 These two buttons are all you need to play.
 
-<Picture src={age} alt={"An animation of the player entering their age."} />
+<PostPicture src={age} alt={"An animation of the player entering their age."} showAlt={false} title="Age" />
 
 Use the buttons to enter your age. The numbers only range from 5 to 14+, but anyone can play. Older players get a more challenging game. Younger players get a simpler game and extra points.
 
-<Picture src={pushBoth} alt={"An animation of the tutorial mode."} />
+<PostPicture src={pushBoth} alt={"An animation of the tutorial mode."} showAlt={false} title="Tutorial" />
 
 If the little arrow is pointing at an animal, push the left button. If the little arrow is pointing at a plant, push the right button.
 
-<Picture src={slow} alt={"An animation of the player being warned to slow down."} />
+<PostPicture src={slow} alt={"An animation of the player being warned to slow down."} showAlt={false} title="Slow down!" />
 
 Play quickly, but carefully. If you just hit the buttons crazily, the game will stop until you slow down.
 
-<Picture src={mash} alt={"An animation of the button-mashing bonus game."} />
+<PostPicture src={mash} alt={"An animation of the button-mashing bonus game."} showAlt={false} title="Mash!" />
 
 If you're doing a good job, sometimes you can play a quick bonus game. Push the two buttons as fast as you can!
 
@@ -71,7 +71,7 @@ If you're doing a good job, sometimes you can play a quick bonus game. Push the 
 
 Think of the game as having five modes that you cycle through: attract, age, tutorial, game, and score. You can move to the next mode in the sequence by pressing the `Enter` key on your keyboard. To move back to the previous mode press the `Backspace` key.
 
-<Picture src={modeFlow} alt={"A diagram of mode transitions: attract, age, tutorial, game, and score."} />
+<PostPicture src={modeFlow} alt={"A diagram of mode transitions: attract, age, tutorial, game, and score."} title="Modes cycle" />
 
 ### Attract mode
 
@@ -112,7 +112,7 @@ Each difficulty level has five sub-levels which corresponds to the number of car
 
 Here are cards from the three difficulty levels:
 
-<Picture src={difficulty} alt={"A sample from each of the three difficulty levels."} />
+<PostPicture src={difficulty} alt={"Left: An easy difficulty card, which just a picture of a cat. Middle: A medium difficulty card, which has a small banana next to the word banana. Right: A hard difficulty card, which is just the word rice."} title="Difficulty levels" />
 
 If a player is just pressing buttons wildly, cards will stop appearing and a warning will appear, telling the player to slow down. After not pushing any buttons for a short amount of time the game resumes as normal.
 
@@ -245,7 +245,7 @@ Inside of each box is an Arduino Leonardo, which is far more power than what thi
 
 The wires have crimp connecters for the switches and Dupont connectors for the Arduinos, so no soldering is required.
 
-<Picture src={hardware} alt="Top: An overview of the wiring from an Arduino to four switches. Left: A closeup of a switch with spade connectors on C and NC. Right: A closeup of the wires connected to an Arduino's GND, \~13, 12, \~11, and \~10 IO headers" />
+<PostPicture src={hardware} alt="Top: An overview of the wiring from an Arduino to four switches. Left: A closeup of a switch with spade connectors on C and NC. Right: A closeup of the wires connected to an Arduino's GND, ~13, 12, ~11, and ~10 IO headers" title="Hardware" />
 
 ### Software
 

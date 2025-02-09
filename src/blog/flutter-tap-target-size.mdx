@@ -11,7 +11,7 @@ tags: [
 ]
 ---
 
-import { Picture } from "astro:assets";
+import PostPicture from "../components/PostPicture.astro"
 import padded from "../images/tap-target-spacing-padded.webp";
 import shrinkwrap from "../images/tap-target-spacing-shrinkwrap.webp";
 import spacing from "../images/tap-target-spacing.webp";
@@ -19,7 +19,7 @@ import title from "../images/tap-target-title.webp";
 
 On mobile platforms you may have noticed that certain kinds of buttons always have some small amount of implicit padding, while on desktop they do not. You can see this in the screenshots below. This is the same code running on an iOS simulator and macOS.
 
-<Picture src={spacing} alt="An iOS app with padded buttons and a macOS app with un-padded buttons." />
+<PostPicture src={spacing} alt="An iOS app with padded buttons and a macOS app with un-padded buttons." title="Padding differences" />
 
 ## Why flutter does this
 
@@ -71,7 +71,7 @@ MaterialApp(
 )
 ```
 
-<Picture src={shrinkwrap} alt="An app on both iOS and macOS with un-padded buttons." />
+<PostPicture src={shrinkwrap} alt="An app on both iOS and macOS with un-padded buttons." title="No padding"/>
 
 And this will enable it for all platforms.
 
@@ -84,7 +84,8 @@ MaterialApp(
 )
 ```
 
-<Picture src={padded} alt="An app on both iOS and macOS with padded buttons." />
+
+<PostPicture src={padded} alt="An app on both iOS and macOS with padded buttons." title="Padding everywhere"/>
 
 ## Wrap-up
 

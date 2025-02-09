@@ -1,0 +1,47 @@
+---
+import { imageConfig, Picture } from "astro:assets";
+import imageIcon from "../images/image-icon.svg";
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  title?: string;
+  showAlt?: boolean;
+}
+
+const { src, alt, title, showAlt = true } = Astro.props;
+const maxWidth = `${src.width}px`;
+---
+
+<div
+  class=`not-prose mx-auto mt-[40px] w-fit border-4 border-black bg-white text-black max-w-[${maxWidth}]`>
+  <div
+    class="flex flex-row items-center gap-2 border-b-4 border-black bg-amber-400 p-1"
+    aria-hidden="true">
+    <div class="max-h-6 max-w-6 shadow-brutal-2">
+      <Picture src={imageIcon} alt={"Decorative image icon"} />
+    </div>
+    {
+      title && (
+        <div class="text-ellipsis text-nowrap text-sm font-bold md:text-lg">
+          {title}
+        </div>
+      )
+    }
+    <div class="flex-grow space-y-1">
+      <div class="min-h-[2px] bg-black"></div>
+      <div class="min-h-[2px] bg-black"></div>
+      <div class="min-h-[2px] bg-black"></div>
+    </div>
+  </div>
+  <div>
+    <Picture src={src} alt={alt} class:list={"m-auto"} />
+  </div>
+  {
+    showAlt && (
+      <div class="prose-sm bg-white p-2 text-left italic" aria-hidden="true">
+        {alt}
+      </div>
+    )
+  }
+</div>

@@ -12,7 +12,7 @@ tags: [
 ]
 ---
 
-import { Picture } from "astro:assets";
+import PostPicture from "../components/PostPicture.astro"
 import bingo01 from "../images/sticky-bingo-rules-01.webp";
 import bingo02 from "../images/sticky-bingo-rules-02.webp";
 import bingo03 from "../images/sticky-bingo-rules-03.webp";
@@ -29,11 +29,11 @@ Sticky Bingo works best with classrooms of several to many students. The student
 
 ## How to play
 
-<Picture src={bingo01} alt={"A 6 by 6 grid of random numbers between 1 and 36"} />
+<PostPicture src={bingo01} alt={"A 6 by 6 grid of random numbers between 1 and 36"} title="New game" />
 
 ⤷ Draw a large grid on the whiteboard with at least 25 spaces. You can draw more spaces depending on if you want the game to last longer or it somehow complements your lesson plan. Write a number from 1 to *n* in each space, where *n* is the size of your grid. I usually write a number that is at least twice the number of students, plus a few more, so everyone has a chance to throw two times without clearing the board. For example, if I had 14 students, I would probably draw 36 spaces. If your class is very large students might be able to throw only once.
 
-<Picture src={bingo02} alt={"A bingo sheet."} />
+<PostPicture src={bingo02} alt={"A bingo sheet with numbers between 1 and 36."} title="Fresh sheet" />
 
 ⤷ Distribute bingo sheets to your students. You can give them blank sheets and have them fill in the numbers themselves, or you can use pre-numbered sheets. I've already made PDFs of both types that you can use. Each PDF file of the pre-numbered sheets contains 100 unique sheets.
 
@@ -49,24 +49,24 @@ Sticky Bingo works best with classrooms of several to many students. The student
 
 If you want to customize the sheets and know some Python, the GitHub repository is here: https://github.com/ozbonus/bingo-sheets
 
-<Picture src={bingo03} alt={"A 6 by 6 grid of numbers from 1 to 36 written in random order being hit by a sticky ball."} />
+<PostPicture src={bingo03} alt={"A 6 by 6 grid of numbers from 1 to 36 written in random order being hit by a sticky ball."} title="First throw" />
 
 
 ⤷ A student throws a sticky ball at a number advantageous to them. Everyone who has that number on a sheet circles it.
 
-<Picture src={bingo04} alt={"One number has been erased by a yellow eraser."} />
+<PostPicture src={bingo04} alt={"One number has been erased by a yellow eraser."} title="Eraser time" />
 
 ⤷ Erase the number that was hit.
 
-<Picture src={bingo06} alt={"A line between the empty space and another number has been erased."} />
+<PostPicture src={bingo06} alt={"A line between the empty space and another number has been erased."} title="Expanding territory" />
 
 ⤷ Erase one of the lines that borders another number. That number's space has now grown to include the space of the number that was hit. To decide where to erase you could ask the student who just threw the sticky ball or follow some heuristic.
 
-<Picture src={bingo07} alt={"Many more numbers and lines have been erased."} />
+<PostPicture src={bingo07} alt={"Many more numbers and lines have been erased."} title="Late game" />
 
 ⤷ The grid of numbers continues to morph as the game progresses.
 
-<Picture src={bingo08} alt={"A bingo sheet with some numbers circled in red."} />
+<PostPicture src={bingo08} alt={"A bingo sheet with some numbers circled in red."} title="Bingo!" />
 
 ⤷ A student has a five numbers in row circled on their sheet and shouts "BINGO!" This may finish the game or you can continue just for fun or if you want to give more students an opportunity to throw.
 

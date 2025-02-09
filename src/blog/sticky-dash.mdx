@@ -11,7 +11,7 @@ tags: [
 ]
 ---
 
-import { Picture } from "astro:assets";
+import PostPicture from "../components/PostPicture.astro"
 import stickyDash0 from "../images/sticky-dash-0.gif";
 import stickyDash1 from "../images/sticky-dash-1.gif";
 import stickyDash2 from "../images/sticky-dash-2.gif";
@@ -56,19 +56,19 @@ Sticky Dash is a fast-paced, team-based sticky ball game that adds some exciteme
 
 ## How to play (visual guide)
 
-<Picture src={stickyDash1} alt="A large drawing on a whiteboard of an apple and a pencil separated by a vertical line, each with three stars underneath." />
+<PostPicture src={stickyDash1} alt="A large drawing on a whiteboard of an apple and a pencil separated by a vertical line, each with three stars underneath." />
 
 Let's pretend you're having a very small class practice just these two words, apple and pencil. You split the class into two teams of two or three students and have draw enough stars so every student is guaranteed to get more than one throw.
 
-<Picture src={stickyDash2} alt="A sticky ball hits the pencil. The student who threw the sticky ball shouts, 'Pencil!'" />
+<PostPicture src={stickyDash2} alt="A sticky ball hits the pencil. The student who threw the sticky ball shouts, 'Pencil!'" />
 
 The student at the front of the line throws the sticky ball at one of the targets. It's a picture of a pencil, so the student shouts, “Pencil!”
 
-<Picture src={stickyDash3} alt="One of the stars beneath the pencil is being erased." />
+<PostPicture src={stickyDash3} alt="One of the stars beneath the pencil is being erased." />
 
 After the student says the correct word or phrase, erase one star from the target area, and have that student rush to the back of the line.
 
-<Picture src={stickyDash4} alt="Only two stars remain below the pencil." />
+<PostPicture src={stickyDash4} alt="Only two stars remain below the pencil." />
 
 Toss the sticky ball to the next student and continue until all of the stars are gone. Then redraw all of the stars and let the other team play and try to be even faster.
 
