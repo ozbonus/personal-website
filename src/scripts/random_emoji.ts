@@ -2,7 +2,7 @@ export function seasonalEmoji(): string {
   const today = new Date();
 
   const newYear = isBetween(today, 1, 1, 1, 2);
-  const lunarNewYear = isBetween(today, 1, 24, 2, 17);
+  const lunarNewYear = isBetween(today, 1, 24, 2, 9);
   const pieDay = isBetween(today, 3, 14, 3, 14);
   const moleDay = isBetween(today, 10, 23, 10, 23);
   const halloween = isBetween(today, 10, 14, 10, 31);
