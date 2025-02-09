@@ -41,6 +41,8 @@ if (editDate) {
     <div class="flex flex-wrap gap-2">
       {tags.map((tag: string) => <PostCardTag tag={tag} />)}
     </div>
-    <slot />
+    <article>
+      <slot />
+    </article>
   </Prose>
 </BaseLayout>
