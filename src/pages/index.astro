@@ -4,12 +4,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PostCard from "../components/PostCard.astro";
 const pageTitle = "Chris 之 Blog";
 const allPosts = await getCollection("posts");
+const numEagerLoad = 6;
 allPosts.sort((a: any, b: any) => b.data.pubDate - a.data.pubDate);
 ---
 
 <BaseLayout pageTitle={pageTitle} activePage="index">
   <div
-    class="max-w-8xl mx-auto grid grid-cols-1 my-8 items-start gap-8 p-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4">
-    {allPosts.map((post) => <PostCard post={post} />)}
+    class="max-w-8xl mx-auto my-8 grid grid-cols-1 items-start gap-8 p-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4">
+    {
+      allPosts.map((post, index) => (
+        <PostCard
+          post={post}
+          loading={index <= numEagerLoad ? "eager" : "lazy"}
+        />
+      ))
+    }
   </div>
 </BaseLayout>
