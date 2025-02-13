@@ -8,9 +8,10 @@ import PostPicture from "../components/PostPicture.astro";
 
 interface Props {
   post: CollectionEntry<"posts">;
+  loading?: "eager" | "lazy";
 }
 
-const { post } = Astro.props;
+const { post, loading = "lazy" } = Astro.props;
 const { title, description, pubDate, editDate, author, cover, alt, tags } =
   post.data;
 
@@ -29,7 +30,13 @@ if (editDate) {
       {title}
     </h1>
     <div class="text-center">
-      <PostPicture src={cover} alt={alt} showAlt={false} title="Cover image"/>
+      <PostPicture
+        src={cover}
+        alt={alt}
+        showAlt={false}
+        title="Cover image"
+        loading={loading}
+      />
     </div>
     <div class="italic text-stone-500">
       <p>
