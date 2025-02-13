@@ -7,9 +7,10 @@ interface Props {
   alt: string;
   title?: string;
   showAlt?: boolean;
+  loading?: "eager" | "lazy";
 }
 
-const { src, alt, title, showAlt = true } = Astro.props;
+const { src, alt, title, showAlt = true, loading = "lazy" } = Astro.props;
 const maxWidth = `${src.width}px`;
 ---
 
@@ -35,7 +36,7 @@ const maxWidth = `${src.width}px`;
     </div>
   </div>
   <div>
-    <Picture src={src} alt={alt} class:list={"m-auto"} />
+    <Picture src={src} alt={alt} loading={loading} class:list={"m-auto"} />
   </div>
   {
     showAlt && (
