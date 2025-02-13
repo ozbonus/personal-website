@@ -1,6 +1,7 @@
 ---
 title: "Flutter tap target size"
 pubDate: 2024-07-24
+editDate: 2025-02-13
 description: "How does Flutter decide which buttons get extra padding?"
 author: "Chris Perry"
 cover: "../images/tap-target-title.webp"
@@ -25,12 +26,9 @@ On mobile platforms you may have noticed that certain kinds of buttons always ha
 
 In the interest of accessibility, Material guidelines for tap targets (buttons, chips, etc.) specify a minimum size of 48x48 pixels on mobile devices. Here are a few ways their size may be adjusted in your Flutter app:
 
-- Your button widget is naturally 40 pixels wide and 36 pixels tall.
-  - An extra 8 pixels of horizontal padding and 12 pixels of vertical padding will be added.
-- Your button widget is naturally 120 pixels wide and 36 pixels tall.
-  - 12 pixels of vertical padding will added, with no additional horizontal padding.
-- Your button widget is 100 pixels wide and 100 pixels tall.
-  - No additional padding will be added.
+* *Your button widget is naturally 40 pixels wide and 36 pixels tall*: an extra 8 pixels of horizontal padding and 12 pixels of vertical padding will be added.
+* *Your button widget is naturally 120 pixels wide and 36 pixels tall*: 12 pixels of vertical padding will added, with no additional horizontal padding.
+* *Your button widget is 100 pixels wide and 100 pixels tall*:  - No additional padding will be added.
 
 Remember that the normal behavior for desktop platforms is to never add additional padding.
 
