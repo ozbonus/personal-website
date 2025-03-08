@@ -1,0 +1,105 @@
+---
+title: "Lingua Fences"
+description: "A high level competitive word game mixing Scrabble and Go."
+pubDate: 2025-03-07
+author: "Chris Perry"
+cover: "../images/lingua-fences-cover.webp"
+alt: "alt text"
+tags: [
+  "ESL",
+  "Game",
+]
+---
+
+import PostPicture from "../components/PostPicture.astro";
+import edges from "../images/lingua-fences-edges.webp";
+import firstWord from "../images/lingua-fences-first-word.webp";
+import moreWords from "../images/lingua-fences-more-words.webp";
+import points from "../images/lingua-fences-points.webp";
+import table from "../images/lingua-fences-table.webp";
+import wordLength from "../images/lingua-fences-word-length.webp";
+
+Lingua fences is a game that mixes the word play of games like Scrabble[^scrabble] with the territorial control of Go[^go]. Players compete to enclose regions of a grid with carefully chosen words that intersect with each other.
+
+I developed this game to play with my advanced ESL students, the ones enrolled in my B2 and higher classes, but some of them had difficulty with it and I had abandon that. Then I tried to play with adults, but despite being highly-educated (Masters and PhDs) and generally brilliant people, they were nevertheless not native English speakers and struggled. To be honest I have never had the opportunity to play this game with anyone in a position to be really good at it. All of the rules below are as yet not adequately play tested and are just my best guess at what would be most fun to play. If you're a super duper hard core word game geek and your friends happen to be as well, I'd greatly appreciate your feedback.
+
+[^scrabble]: https://en.m.wikipedia.org/wiki/Scrabble
+[^go]: https://en.wikipedia.org/wiki/Go_(game)
+
+## Who can play
+
+Lingua Fences can be played by two or more players. To get the most enjoyment out of the game, players will need to have very broad lexicons and be adept spellers. *This is a hard game!*
+
+## Materials
+
+You will need a sheet of graph paper and a pencil (and maybe an eraser) for each player. I've made a made an "official" printable sheet to play with that has a 19x19 grid, a clearly marked starting space (explained below) and a place to keep notes (also explained below). Where I explain the rules of the game I am going to assume you are using this paper. You can download a copy here:
+
+[Lingua Fences Sheet (A4)](https://github.com/ozbonus/lingua-fences/blob/main/lingua-fences-printable-a4.pdf?raw=true)
+
+[Lingua Fences Sheet (Letter)](https://github.com/ozbonus/lingua-fences/blob/main/lingua-fences-printable-letter.pdf?raw=true)
+
+I can also recommend Incompetech's website where you can create graph paper to you own specifications:
+
+https://incompetech.com/graphpaper/
+
+## How to play
+
+<PostPicture src={table} alt="Players sitting around a table, writing on their sheets, and passing them clockwise." title="Write and pass" />
+
+The basic game loop involves every player writing a word on grid and passing the sheets around in a circle. While doing this each player is trying to enclose regions of the grid. Bigger regions award more points. The player with the most points, that is, the player who has enclosed the largest cumulative area, is the winner. There are, naturally, some rules to follow while playing.
+
+### How to write the first word
+
+<PostPicture src={firstWord} alt="Some good and invalid first words. Top-right: This word is too long. Bottom-right: This word does not intersect with the starting square." title="First word" />
+
+Every player receives one sheet of paper like the one you can download above. The square near the top left of the grid that is surrounded by a thicker and darker line is the starting square. Each player must write a word that intersects with that square. This may begin in the starting square, finish in the starting square, or overlap it somewhere in the middle. The word must be written either left-to-right or top-to-bottom. Only one letter can be written in a square. The word may contain a minimum of two letters and a maximum of four letters. Longer words are possible later in the game and are explained below.
+
+After every player has written a word all players pass their sheets to the player on their left.
+
+### How to write all subsequent words
+
+<PostPicture src={moreWords} title="Good and invalid words" alt="Some examples of good and invalid words, with the invalid words numbered. 1: The word 'raindrop' is not written in a valid direction. 2: Words may not be written diagonally. 3: Adding 'news' the end of 'token' makes 'tokenews', which is not a real word. 4: Adding the word 'key' also makes 'poutf' and 'ky', which are not real words." />
+
+All subsequent words on a board must overlap another word that is already on the board. Just like the first word, they must be written left-to-right and top-to-bottom. Any two adjacent letters must be a part of exactly one valid word, which in practice means that you cannot chain words in a straight line and parallel words must have at least one empty space between them.
+
+### Maximum and minimum word length
+
+<PostPicture src={wordLength} title="Tracking longest word length" alt="A player writes a word that is 1 letter longer than the current longest word. The player crosses out the 3 and writes 4. Note that this number starts at 3 by default." />
+
+The longest word a player can write on a particular sheet during a turn is 1 letter longer than the longest word already on that same sheet. For example, if the 6-letter word *turtle* is on a sheet, then a player could write the 7-letter word *rainbow* but not the 8-letter word *libraries*.
+
+There's a space at the bottom of the sheet for keeping track of the longest word. If a player writes a word that is one letter longer, as is allowed, then that player must cross out the old number and write the length of the new longest word. The official sheet starts with a 3 in this location, so the longest word length on the first turn would be 4.
+
+You can always write a word that is equal to or shorter than the longest word, to a minimum of 2 letters.
+
+### Extending existing words
+
+Players may extend a word already on the board with a prefix or suffix as long as the new word follows the other rules for valid words.
+
+### Getting points
+
+<PostPicture src={points} title="Points" alt="CJ added the word 'tapes' and gained 1 point. Max added the word 'are' and gained 5 points. Note that there is a open corner between the 'e' and the 'u'. This is sufficient to enclose an area."/>
+
+Whenever a player writes a word that completes the enclosure of an area within the grid, then that player is awarded points equal to the number of empty squares inside of that area. Because enclosing an area may effectively also encloses the inverse area (think about it), always the smallest enclosed area is that one that is claimed. If these areas are equal, then the player may choose one.
+
+A player who encloses an area should mark their claim by writing their name or initials inside of it. They can also, for example, draw an outline around the area or lightly shade it in. It's also usually helpful to write the point value as well.
+
+The edges of the grid can enclose areas of the grid, but only on one side.
+
+<PostPicture src={edges} title="Using edges" alt="CJ, Jay, and Max have each used one edge of the grid to enclose an area. The corner still up for grabs because two edges cannot be used to enclose an area."/>
+
+### Passing a turn
+
+A player may choose to pass their turn with a sheet and not write a word. However, the next player will be allowed to two words. If two players pass their turns on the same sheet in a row, then that sheet is taken out of the game. Turn it over to signify that is no longer in play, but continue passing it around. Players who receive this sheet may not write any more words on it. If they want to be helpful they can tally up the points each player has won on that sheet.
+
+### Finishing the game
+
+When all of the sheets have been taken out of the game as described above in *Passing a turn*, then the game is finished. Tally up all of the points won by every player on every sheet. The player with the most points is the winner.
+
+## Variations
+
+* When I play this game only English words one would find in a dictionary are considered valid, but of course this game could work well in many other languages--maybe simultaneously! Also, your players might decide ahead of time that names of well-known fictional characters are fair game, for example.
+
+## Considerations
+
+* Please do wait until everyone has finished writing a word for the round and then pass all of the papers simultaneously. It's not unlikely that one player needs some more time to think and if players just pass their paper as soon as they're finished the slower player will have a pile of papers build up next to them. That kind of pressure takes the fun out of the game.
