@@ -29,7 +29,7 @@
 			"description: \"${2:description}\"",
 			"pubDate: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
 			"author: \"${3:Chris Perry}\"",
-			"cover: \"/src/images/${4:placeholder.webp}\"",
+			"cover: \"../images/${4:placeholder.webp}\"",
 			"alt: \"${5:alt text}\"",
 			"tags: [",
 			"\t\"ESL\",",
