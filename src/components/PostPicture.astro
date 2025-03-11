@@ -36,7 +36,7 @@ const maxWidth = `${src.width}px`;
     </div>
   </div>
   <div>
-    <Picture src={src} alt={alt} loading={loading} class:list={"m-auto"} />
+    <Picture src={src} formats={['webp']} alt={alt} loading={loading} class:list={"m-auto"} />
   </div>
   {
     showAlt && (
