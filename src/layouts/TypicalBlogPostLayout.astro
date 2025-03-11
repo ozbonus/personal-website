@@ -15,6 +15,9 @@ const { post, loading = "lazy" } = Astro.props;
 const { title, description, pubDate, editDate, author, cover, alt, tags } =
   post.data;
 
+const url = `https://hellochris.dev/posts/${post.id}`;
+const imageUrl = `https://hellochris.dev/images/${cover.src}`;
+
 const formattedPubDate = formatDate(pubDate);
 let formattedEditDate: string | null = null;
 
@@ -24,6 +27,20 @@ if (editDate) {
 ---
 
 <BaseLayout pageTitle={title} description={description} keywords={tags}>
+  <Fragment slot="meta-tags">
+    <meta property="og:url" content={url} />
+    <meta property="og:article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.15/dist/katex.css"
+      integrity="sha384-zLeDfjAc8DwENEGNNTkTTnfsm/SivaEXAA2fE7fRzBTXD0tVOIzGYvE5XYRds2T3"
+      crossorigin="anonymous"
+    />
+  </Fragment>
   <Prose>
     <h1
       class="text-balance text-center underline decoration-sky-600 decoration-8">

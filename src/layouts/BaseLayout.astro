@@ -25,16 +25,11 @@ const {
     <meta name="keywords" content={keywords.join(", ")} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <slot name="meta-tags" />
     <link rel="author" href="https://github.com/ozbonus" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{pageTitle}</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.16.15/dist/katex.css"
-      integrity="sha384-zLeDfjAc8DwENEGNNTkTTnfsm/SivaEXAA2fE7fRzBTXD0tVOIzGYvE5XYRds2T3"
-      crossorigin="anonymous"
-    />
   </head>
   <body class="">
     <Header activePage={activePage} />
