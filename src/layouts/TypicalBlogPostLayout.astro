@@ -16,7 +16,7 @@ const { title, description, pubDate, editDate, author, cover, alt, tags } =
   post.data;
 
 const url = `https://hellochris.dev/posts/${post.id}`;
-const imageUrl = `https://hellochris.dev/images/${cover.src}`;
+const imageUrl = `https://hellochris.dev/images${cover.src}`;
 
 const formattedPubDate = formatDate(pubDate);
 let formattedEditDate: string | null = null;
