@@ -24,6 +24,12 @@ export default defineConfig({
   build: {
     assets: "assets",
   },
+  redirects: {
+    "/posts/sticky-ball-games/": {
+      status: 301,
+      destination: "/posts/sticky-ball",
+    }
+  },
   vite: {
     server: {
       watch: {
