@@ -32,7 +32,7 @@ if (editDate) {
     <meta property="og:type" content="article" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image" content={new URL(cover.src, Astro.site)} />
     <meta property="og:image:alt" content={alt} />
     <meta name="twitter:card" content="summary" />
     <link
