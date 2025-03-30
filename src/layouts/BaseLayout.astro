@@ -9,6 +9,7 @@ interface Props {
 import "/src/styles/global.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import PostHog from "../components/PostHog.astro";
 const {
   pageTitle,
   activePage,
@@ -30,6 +31,7 @@ const {
     <link rel="author" href="https://github.com/ozbonus" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <PostHog />
     <title>{pageTitle}</title>
   </head>
   <body class="">
