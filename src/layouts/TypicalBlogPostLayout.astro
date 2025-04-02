@@ -12,7 +12,7 @@ interface Props {
 }
 
 const { post, loading = "lazy" } = Astro.props;
-const { title, description, pubDate, editDate, author, cover, alt, tags } =
+const { title, description, pubDate, editDate, author, cover, alt, tags, keywords } =
   post.data;
 
 const url = `https://hellochris.dev/posts/${post.id}`;
@@ -26,7 +26,7 @@ if (editDate) {
 }
 ---
 
-<BaseLayout pageTitle={title} description={description} keywords={tags}>
+<BaseLayout pageTitle={title} description={description} keywords={keywords}>
   <Fragment slot="meta-tags">
     <meta property="og:url" content={url} />
     <meta property="og:type" content="article" />

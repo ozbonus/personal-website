@@ -16,6 +16,7 @@ const posts = defineCollection({
     cover: image(),
     alt: z.string(),
     tags: z.array(z.string()),
+    keywords: z.array(z.string()),
   })
 });
 
