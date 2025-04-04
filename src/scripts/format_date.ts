@@ -8,10 +8,18 @@ export function formatDate(date: Date): string {
     ordinalDay = `${day}th`;
   } else {
     switch (day % 10) {
-      case 1: ordinalDay = `${day}st`;
-      case 2: ordinalDay = `${day}nd`;
-      case 3: ordinalDay = `${day}rd`;
-      default: ordinalDay = `${day}th`;
+      case 1:
+        ordinalDay = `${day}st`;
+        break;
+      case 2:
+        ordinalDay = `${day}nd`;
+        break;
+      case 3:
+        ordinalDay = `${day}rd`;
+        break;
+      default: 
+        ordinalDay = `${day}th`;
+        break;
     }
   }
 
