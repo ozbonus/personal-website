@@ -8,7 +8,7 @@ const posts = defineCollection({
       message: "Title must be 72 characters or fewer."
     }),
     description: z.string().max(128, {
-      message: "Title must be 128 characters or fewer."
+      message: "Description must be 128 characters or fewer."
     }),
     pubDate: z.date(),
     editDate: z.date().optional(),
