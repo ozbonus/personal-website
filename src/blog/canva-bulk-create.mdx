@@ -1,0 +1,199 @@
+---
+title: "How to make custom printables for all of your students with Canva"
+description: "Easily make fully custom documents with a template and a spreadsheet."
+pubDate: 2025-06-20
+author: "Chris Perry"
+cover: "../images/canva-bulk-cover.webp"
+alt: "A grid of icons that represent documents, each with a different emoji on top, except one document icon is fashioned to appear like the Canva logo."
+tags: [
+  "ESL",
+  "Guide",
+]
+keywords: [
+  "canva bulk create",
+  "personalized documents",
+  "canva templates",
+  "spreadsheet integration",
+  "data merge software",
+  "mail merge tutorial",
+  "canva pro features",
+  "custom take-home materials",
+  "student report card design",
+  "canva for teachers",
+  "bulk document generation",
+  "canva app integration",
+  "exporting printable pdfs",
+  "data-driven design",
+  "canva automation",
+  "graphic design workflow",
+  "document customization",
+  "educational resources canva",
+  "microsoft word mail merge",
+  "google sheets to canva",
+  "canva design tips",
+  "creating multiple documents",
+  "personalized certificates",
+  "batch document creation",
+  "canva tutorials",
+  "productivity hacks canva",
+  "digital design tools",
+  "marketing materials canva",
+  "business document automation",
+  "event invitations canva",
+  "school communication tools",
+  "teacher resources",
+  "streamlining workflows",
+  "canva features explained",
+  "how to use bulk create",
+  "template design best practices",
+  "data import to canva",
+  "connecting data to placeholders",
+  "generating designs in canva",
+  "printing with canva",
+  "pdf export options",
+  "canva mobile app limitations",
+  "troubleshooting canva bulk create",
+  "weekly progress reports",
+  "customizing educational materials",
+  "canva for non-designers"
+]
+---
+
+import PostPicture from "../components/PostPicture.astro";
+import bulkCreatePages from "../images/canva-bulk-pages.webp";
+import bulkCreateStickers from "../images/canva-bulk-stickers.webp";
+import canvaBulkConnectData from "../images/canva-bulk-connect-data.webp";
+import canvaBulkCopyData from "../images/canva-bulk-copy-data.webp";
+import canvaBulkCover from "../images/canva-bulk-cover.webp";
+import canvaBulkData from "../images/canva-bulk-data.webp";
+import canvaBulkGetApp from "../images/canva-bulk-get-app.webp";
+import canvaBulkNames from "../images/canva-bulk-names.webp";
+import canvaBulkOpenApp from "../images/canva-bulk-open-app.webp";
+import canvaBulkPastedData from "../images/canva-bulk-pasted-data.webp";
+import canvaBulkPrint from "../images/canva-bulk-print.webp";
+import canvaBulkReady from "../images/canva-bulk-ready.webp";
+import canvaBulkTemplate from "../images/canva-bulk-template.webp";
+import canvaBulkTextAlignment from "../images/canva-bulk-text-alignment.webp";
+
+Canva's 'Bulk create' feature gives you the ability to rapidly create personalized documents by combining a template file and some well-structured data. In this guide I'll show you how it works by creating some weekly report cards for students from a fictional school and you can follow along!
+
+💵 This feature is only available with a Canva Pro or Teams account. If you don't have one of those you may still be able to do something similar with other popular software packages. Microsoft Word calls it 'mail merge'. Adobe InDesign and Affinity Publisher both call it 'data merge'.
+
+📵 Currently the bulk create feature is only available for web browsers on macOS, Windows, or Linux, or with the Canva app on Android or iOS tablets. It's not officially supported on smart phones. I really recommend doing this on a regular computer, since the touch interface on the tablet app is a lot more finicky than using a mouse.
+
+## Gather your data
+
+<PostPicture src={canvaBulkData} alt="This spreadsheet contains the mock data for this guide." title="Our data" />
+
+The first thing you need is well-structured data. I suppose for most teachers that's going to come in the form of a spreadsheet, which will work perfectly. For this guide I've already prepared a spreadsheet with some made-up data. Open this link in a new tab and then come back here:
+
+https://docs.google.com/spreadsheets/d/1-j3lRnA2-flIsKD-iiPQgqEoostWNC-wOSL_ktejBVI/edit?usp=sharing
+
+The data for this imaginary class is a weekly summary of each student's days absent, token economy[^points] points obtained, a basic assessment of their homework, and quiz scores.
+
+The way the data is formatted is very important. Every row of data corresponds to what will be one unique document. This spreadsheet has 10 rows of data, so that means it can be used to make ten documents. You must also have a header row that contains a name for each column and those names must all be unique. I wrote the names in ALL_CAPS, but that was only to make them visually distinct. It isn't required.
+
+🎨 *Canva prefers the term 'design' instead of 'document'. I think the former is a little confusing, especially if you're new to Canva, so I'm going to keep using 'document' throughout this guide.*
+
+[^points]: A token economy is a system for rewarding desired behaviors and discouraging undesired behaviors by means of awarding or taking away tokens. Acquired tokens can traded in for rewards. https://www.pacificautism.org/what-is-a-token-economy-system/
+
+
+## Make a template
+
+You have to create a document that serves as the template on which your customized documents will be based.
+
+<PostPicture src={canvaBulkTemplate} title="Our template" alt="A sample template document within the Canva web interface. The file menu is open and the 'Make a copy' function is highlighted." />
+
+I've already made a template for you to follow along with in this guide. Open this link in a new tab and come back here:
+
+https://www.canva.com/design/DAGkih2nhUA/sXhnWEOZce_xAROfmM0gZA/edit?utm_content=DAGkih2nhUA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+You can't edit this document directly, but you can make a copy and edit that. Open the 'File' menu and select 'Make a copy' in order to... well, make a copy of course!
+
+### Tips for making a good template
+
+I want to take a little detour in this guide and offer some advice for making a really good template. A well-made template will adhere to these three principles:
+
+- Placeholders are easily distinguished from other text.
+- Text boxes for placeholders are large enough to fit any data that is likely to be inserted.
+- Textboxes are left- middle- or right-aligned according the needs of the final output document.
+
+<PostPicture src={canvaBulkNames} title="Matching names" alt="The names of the placeholders in the spreadsheet (top) resemble the names of the columns in the template (bottom)." />
+
+In the template for this guide you'll see some odd-looking text like ((STUDENT)) and ((DATE)). These are placeholders that will be replaced with data from the spreadsheet. The capital letters and parentheses are not required, but I prefer this format so that they stick out amongst other bits of text that won't change. Notice also that every placeholder in the template corresponds to a column in the spreadsheet. For example there's a ENG_HW column in the spreadsheet and a ((ENG_HW)) placeholder in the template. It's not strictly required that these names match each other, but I choose to do it this way so that it's clear what data is going to replace a placeholder.
+
+<PostPicture src={canvaBulkTextAlignment} title="Size and alignment" alt="Top: The date placeholder is center-aligned and the box is much wider than the placeholder text. Bottom: The comments placeholder is left-aligned and the box extends to the edge of the area reserved for comments." />
+
+You need to be mindful of the boxes that contain your placeholders, making sure that they can accommodate any kind of text that might be inserted. That means you need to carefully set the alignment and width of the text boxes. In the template I made for this guide, select the ((DATE)) placeholder near the top. Notice that it is center-aligned and the box is wide enough to fit any date. In contrast, the ((COMMENTS)) placeholder near the bottom is left-aligned and the box extends to the edge of the area reserved for comments. If the comment data for a student is longer that one line, then it will go no further towards the right than that limit; instead it will flow downwards.
+
+## Add the 'Bulk create' app
+
+Bulk creating documents is not a feature native to the basic Canva experience. Rather, it's provided by an app (made by the Canva team) that is available through Canva's own adorably miniature app store.
+
+<PostPicture src={canvaBulkGetApp} title="Getting the app" alt="> Left: The 'Apps' button leads you directly to the 'Bulk create' app. Top-right: The bulk create app is the top result when searching by its name. Bottom-right: The app remains in the sidebar." />
+
+At the bottom of the left sidebar in Canva there's a button labeled 'Apps'. You might need to scroll down on a device with a small screen. That button opens a window where you can access apps that expand Canva's abilities. A button for the 'Bulk create' app should be one of the recommended apps, but you can search for it if you don't see it.
+
+After using the app for the first time it will remain in the sidebar until you choose to delete it, so you won't have to search for it every time you need it.
+
+## Import data
+
+Now it's time for you to move the data from the spreadsheet and into Canva.
+
+<PostPicture src={canvaBulkCopyData} title="Select and copy" alt="All of the students' data has been selected and is being copied." />
+
+Select all of the data in the spreadsheet and copy it by using ⌘-c on macOS, CTRL-c on Windows, the right-click menu with a mouse, or the long-press menu on a tablet.
+
+<PostPicture src={canvaBulkOpenApp} title="Opening the app" alt="Left: The 'Enter data manually' button takes you to where you can paste your spreadsheet data. Right: The screen in which you can paste your data." />
+
+Go back to Canva and open the 'Bulk create' app using the icon on the left sidebar. Select the big purple 'Enter data manually' button. This will open a window that looks like a spreadsheet. It may have some simple placeholder data already there. If so, you can delete it by pushing the the "Clear table" button on the bottom left.
+
+📥 *There are a few other ways to import data that you can explore after you finish this guide. Just recently Canva started offering its own spreadsheet feature that makes connecting to templates very easy. If you have a Microsoft Excel file or a CSV file, you can instead use the 'Upload data' button and upload your file.*
+
+<PostPicture src={canvaBulkPastedData} title="Data transfer" alt="The data, including the header row, has been pasted and is ready to go." />
+
+When the table is clear select the top left cell and paste your data using ⌘-v on macOS, CTRL-v on Windows, the right-click menu with a mouse, or the long-press menu on a tablet. Then press the 'Done' button on the bottom right.
+
+🐛 *BUG ALERT: I've encountered a bug on the Android app. Data copied from a Google Sheet can't be pasted into Canva and instead you'll get an error saying the data is not compatible. Until Canva or Google--I don't know whose fault it is--fixes this issue you might run into trouble using an Android device.*
+
+🐛  *BUG ALERT: I've encountered a bug on the iPad app. A few times I've noticed that the columns in the data entry window are not in the order that they are supposed to be and when I create the documents some data is in the wrong location. The simple fix for this is to clear the table and paste in your data again, including the column headers. Hopefully Canva fixes this soon.*
+
+### Connect placeholders
+
+Now you need to make connections between the data and the placeholders in the template. This is slightly tedious process, but you shouldn't have to do it often.
+
+<PostPicture src={canvaBulkConnectData} title="Making connections" alt="Selecting a placeholder and connecting to a column in the data." />
+
+Start with the ((DATE)) placeholder. Click or tap it to select it. Near the top of the screen a little menu will appear with 'Connect data' on it. The same button appears if you right-click with a mouse or select the three-dots ( ... ) menu on a tablet. That button, in turn, opens another menu where you can select which column of data you want to connect to the placeholder. Continue this for all of the placeholders.
+
+📌 *The bulk create sidebar must be open, otherwise the 'Connect data' button will not appear!*
+
+## Start the presses!
+
+After you've finished connecting all of the placeholders with the data, you can press the big purple 'Continue' button on the lower left. Beneath that there is another button for advanced options. With that you can choose to change the output folder and choose between outputting one document with one page per line of data (the default setting) or one document per line of data. I always choose the former to make printing easier.
+
+<PostPicture src={canvaBulkReady} title="Ready to go" alt="All of the placeholders have been connected to a data source and the output is ready to be generated." />
+
+Next you will see a list of all of the documents that Canva is ready to create for you. If there are any you'd like to exclude, simply uncheck them. There's another big purple button on the lower left labeled 'Generate (number) designs'. After pressing this button a popup message will appear that will lead you to the new document if you'd like to view it immediately.
+
+<PostPicture src={bulkCreatePages} title="One document, many pages" alt="The Bulk create app made a single document with a page for every line of data." />
+
+If you're following along with this guide, then you will have just created one document with ten pages, one for each row of the spreadsheet and therefore one for each student. Canva supports creating documents with up to 200 pages!
+
+## Adding a little sparkle
+
+I'm sure you agree that this is all really amazing and helpful, but maybe you're also just a bit disappointed with how same-y these report cards look. Luckily you still have a chance to let your creativity shine.
+
+<PostPicture src={bulkCreateStickers} title="Good job!" alt="Olivia's report is covered in stickers!" />
+
+The document that you now have is a regular Canva document (or 'design' as they like to call them) and all of the editing features you are familiar with are available to you. You can adjust data that didn't fit quite right, or make changes to the designs that are customized for each student.
+
+### Exporting for print
+
+Creating a printable PDF is a pretty straightforward process compared to everything you've done up to this point.
+
+<PostPicture src={canvaBulkPrint} title="Printable PDF" alt="Download a printable PDF. 1: Select 'Share'. 2. Select 'Download'. 3: Choose the 'PDF Print' file type. 4: Choose the CMYK color profile (optional, recommended)." />
+
+If you want to print your documents, start by selecting the 'Share' button on the top right. (*Not the 'Print with Canva' button!*) That will open up a menu with a button labeled 'Download' that you should select. In the drop down menu titled 'File type', select 'PDF Print'. In the drop down menu titled 'Color profile', select 'CMYK'. That last part isn't strictly necessary, but it will help keep colors more consistent between what's on your screen and what will be on the paper. Finally, select the big purple 'Download' button. After processing for a few moments, your PDF file should begin to download automatically.
+
+What you do with your file is up to you. Email it, display it, print it! I hope you found this guide helpful. If you have any comments, I'll be happy to read them -> chris@crayonfox.com

@@ -23,7 +23,7 @@ const maxWidth = `${src.width}px`;
 ---
 
 <div
-  class=`not-prose mx-auto mt-[40px] w-fit border-4 border-black bg-white text-black max-w-xl`>
+  class=`not-prose mx-auto mt-[40px] w-fit border-4 border-black bg-white text-black`>
   {
     showBanner && (
       <div
@@ -33,14 +33,14 @@ const maxWidth = `${src.width}px`;
           <Picture src={imageIcon} alt={"Decorative image icon"} />
         </div>
         {title && (
-          <div class="text-ellipsis text-nowrap text-sm font-bold md:text-lg">
+          <div class="text-ellipsis text-nowrap text-sm font-semibold tracking-widest md:text-lg">
             {title}
           </div>
         )}
         <div class="flex-grow space-y-1">
-          <div class="min-h-[2px] bg-black" />
-          <div class="min-h-[2px] bg-black" />
-          <div class="min-h-[2px] bg-black" />
+          <div class="min-h-[2px] bg-amber-700" />
+          <div class="min-h-[2px] bg-amber-700" />
+          <div class="min-h-[2px] bg-amber-700" />
         </div>
       </div>
     )
